@@ -1,17 +1,17 @@
 {
-  "version": 2,
+  "version": 3,
   "builds": [
     {
-      "src": "package.json",
+      "src": "vercel-build.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": ".vercel/output/static"
       }
     }
   ],
   "routes": [
     {
-      "src": "/.*",
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
