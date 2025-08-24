@@ -79,7 +79,7 @@ const DownloadSection = ({ id }: DownloadSectionProps) => {
             className="gap-2 px-8 py-6 text-lg font-semibold"
           >
             <a 
-              href="https://expo.dev/artifacts/eas/cHJYz9KrWgrWEMyWS7YZFd.apk"
+              href="https://expo.dev/artifacts/eas/rsaiUP6syC8hWAmx1M3Nnq.apk"
               download="Meera_App.apk"
               target="_blank"
               rel="noopener noreferrer"
