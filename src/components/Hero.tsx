@@ -25,7 +25,7 @@ Be the first to try it. Get early access today
                 className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90 shadow-glow"
               >
                 <a 
-                  href="https://expo.dev/artifacts/eas/cHJYz9KrWgrWEMyWS7YZFd.apk"
+                  href="https://expo.dev/artifacts/eas/rsaiUP6syC8hWAmx1M3Nnq.apk"
                   download="Meera_App.apk"
                   target="_blank"
                   rel="noopener noreferrer"
