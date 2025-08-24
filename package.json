@@ -5,10 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
+    "build": "vite build --platform=node",
+    "build:dev": "vite build --mode development --platform=node",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "overrides": {
+    "rollup": "3.29.4"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
