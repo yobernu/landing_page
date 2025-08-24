@@ -1,8 +1,12 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => {
+  // Load env file based on `mode` in the current working directory.
+  const env = loadEnv(mode, process.cwd(), '');
+  
+  return {
   server: {
     host: '::',
     port: 8080,
@@ -13,8 +17,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: '/',
   build: {
     target: 'esnext',
+    outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -25,6 +32,10 @@ export default defineConfig({
     },
   },
   define: {
-    'process.env': {},
+    'process.env': {
+      ...env,
+      VITE_APP_BASE_URL: JSON.stringify(process.env.VITE_APP_BASE_URL || '/')
+    },
   },
+  };
 });
